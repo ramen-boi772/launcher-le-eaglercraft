@@ -8,6 +8,13 @@
         body { font-family: sans-serif; text-align: center; margin: 20px;}
         button { font-size: 16px; margin: 5px; padding: 8px 16px; cursor: pointer; border: 2px solid #55b555;}
         iframe { width: 90%; height: 600px; border: 2px solid #55b555; margin-top: 20px; }
+
+        /* fullscreen iframe (added) */
+        iframe:fullscreen {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -19,25 +26,34 @@
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff-v4/')">Beta 1.7.3</button>
     <button onclick="loadPart('(PLACEHOLDER)')">not yet added</button>
 
-    <iframe id="gameFrame" src=""></iframe>
+    <!-- fullscreen button (added) -->
+    <button onclick="toggleFullscreen()">Fullscreen</button>
+
+    <iframe id="gameFrame" src="" allowfullscreen></iframe>
 
     <script>
         function loadPart(url) {
             document.getElementById('gameFrame').src = url;
         }
+
+        // fullscreen function (added)
+        function toggleFullscreen() {
+            const iframe = document.getElementById('gameFrame');
+            if (!document.fullscreenElement) {
+                iframe.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
     </script>
 </body>
 </html>
-</p><element style="color: black;">These websites where made by me ramen-boi772 but the source code for them were not made by me.</element> <element style="color: red:"><a href="https://eaglercraftub.neocities.org/" target="_blank">Visit them at this website</a></p></element>
 
-
-
-
-
-
-
-
-
+</p><element style="color: black;">These websites where made by me ramen-boi772 but the source code for them were not made by me.</element>
+<element style="color: red:">
+    <a href="https://eaglercraftub.neocities.org/" target="_blank">Visit them at this website</a>
+</p>
+</element>
 
 <!DOCTYPE html>
 <html lang="en">
