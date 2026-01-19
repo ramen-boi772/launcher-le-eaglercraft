@@ -9,11 +9,18 @@
         button { font-size: 16px; margin: 5px; padding: 8px 16px; cursor: pointer; border: 2px solid #55b555;}
         iframe { width: 90%; height: 600px; border: 2px solid #55b555; margin-top: 20px; }
 
-        /* fullscreen iframe (added) */
         iframe:fullscreen {
             width: 100vw;
             height: 100vh;
             border: none;
+        }
+
+        /* ADDED: fullscreen button bottom-left */
+        button[onclick="toggleFullscreen()"] {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            z-index: 9999;
         }
     </style>
 </head>
@@ -26,7 +33,6 @@
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff-v4/')">Beta 1.7.3</button>
     <button onclick="loadPart('(PLACEHOLDER)')">not yet added</button>
 
-    <!-- fullscreen button (added) -->
     <button onclick="toggleFullscreen()">Fullscreen</button>
 
     <iframe id="gameFrame" src="" allowfullscreen></iframe>
@@ -36,7 +42,6 @@
             document.getElementById('gameFrame').src = url;
         }
 
-        // fullscreen function (added)
         function toggleFullscreen() {
             const iframe = document.getElementById('gameFrame');
             if (!document.fullscreenElement) {
