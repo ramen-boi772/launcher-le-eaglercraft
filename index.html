@@ -15,7 +15,6 @@
             border: none;
         }
 
-        /* ADDED: fullscreen button bottom-left */
         button[onclick="toggleFullscreen()"] {
             position: fixed;
             bottom: 15px;
@@ -25,7 +24,11 @@
     </style>
 </head>
 <body>
-    <h1>Launcher Le Eaglercraft</h1>
+    <h1>
+        <img src="favicon.ico" alt="icon" style="height:32px; vertical-align:middle; margin-right:8px;">
+        Launcher Le Eaglercraft
+    </h1>
+
     <p>Click a version to play!</p>
 
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff/')">Minecraft 1.12.2</button>
@@ -34,8 +37,8 @@
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff-v7/')">Beta 1.3_01</button>
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff-v5/')">Alpha 1.2.6</button>
     <button onclick="loadPart('https://ramen-boi772.github.io/secret-stuff-v3/')">Minecraft Indev</button>
+    <button onclick="loadPart('https://ramen-boi-72.github.io/secret-stuff-v8/')">C0.30</button>
     <button onclick="loadPart('https://www.anyways.design/')">Not Yet Added</button>
-
     <button onclick="toggleFullscreen()">Fullscreen</button>
 
     <iframe id="gameFrame" src="" allowfullscreen></iframe>
